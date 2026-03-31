@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <marquee behavior="alterate" direction="right">I LOVE YOU</marquee>
+    <audio id="bgMusic" src="perfect.mp3" loop></audio>
+
+<div class="screen active" id="screen1">
+    <h1>🎂 Happy Birthday, JUDITH BALES!</h1>
+    <button onClick="nextScreen(2)">Start 🎉</button>
+</div>
+
+<div class="screen" id="screen2">
+    <h2>💌 A Message For You</h2>
+    <p id="messageText"></p>
+    <button onclick="nextScreen(3)">Next ➡️</button>
+</div>
+
+<div class="screen" id="screen3">
+    <h2>💖 Just So You Know</h2>
+    <p>You make everything better just by being you 💕</p>
+    <button onclick="nextScreen(4)">Continue 🎁</button>
+</div>
+
+<div class="screen" id="screen4">
+    <h1>🎉 Surprise!!! 🎉</h1>
+    <p>May all your wishes come true 🎂💖</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
