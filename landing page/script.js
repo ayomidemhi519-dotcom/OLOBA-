@@ -1,12 +1,20 @@
 // Smooth scroll for nav links
 const links = document.querySelectorAll('nav a');
 
+const closeNavMenu = () => {
+  navLinks.classList.remove('active');
+  hamburger.classList.remove('active');
+};
+
 links.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
     if(target){
       target.scrollIntoView({ behavior: 'smooth' });
+    }
+    if(navLinks.classList.contains('active')) {
+      closeNavMenu();
     }
   });
 });
@@ -23,7 +31,14 @@ const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active'); // slide in menu
-  hamburger.classList.toggle('active'); // morph hamburger to X
+  hamburger.classList.toggle('active'); // morph hamburger to X 
+});
+
+document.addEventListener('click', (event) => {
+  const isClickInsideNav = navLinks.contains(event.target) || hamburger.contains(event.target);
+  if(navLinks.classList.contains('active') && !isClickInsideNav) {
+    closeNavMenu();
+  }
 });
 
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
