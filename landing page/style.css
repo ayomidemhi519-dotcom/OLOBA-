@@ -371,6 +371,47 @@ footer {
   gap: 15px;
 }
 
+.tech-stack {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tech-stack h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.stack-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tech-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  width: 120px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tech-card img {
+  width: 60px;
+}
+
+.tech-card p {
+  margin-top: 10px;
+  color: white;
+}
+
+/* 🔥 Hover effect */
+.tech-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
 .contact-form input,
 .contact-form textarea {
   padding: 12px;

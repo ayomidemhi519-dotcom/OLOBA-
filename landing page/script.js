@@ -94,6 +94,19 @@ form.addEventListener("submit", function(e) {
    if (!form.checkValidity()) {
     return; 
   }
+  const cards = document.querySelectorAll(".tech-card");
+
+window.addEventListener("scroll", () => {
+  cards.forEach(card => {
+    const position = card.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (position < screenHeight - 50) {
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
 
   emailjs.sendForm("service_g5xeq6q", "template_jb5hfcm", this)
     .then(() => {

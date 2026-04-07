@@ -24,6 +24,8 @@ function nextScreen(screenNumber) {
              .catch(err => console.log("Music blocked:", err));
     }
 
+    
+
     // Hide all screens
     let screens = document.querySelectorAll(".screen");
     screens.forEach(screen => screen.classList.remove("active"));
